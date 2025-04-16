@@ -1,0 +1,34 @@
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: mrp_user
+      POSTGRES_PASSWORD: mrp_pass
+      POSTGRES_DB: mrp_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db_scripts:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./backend  # Asegúrate que esta ruta exista
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_USER=mrp_user
+      - DB_PASSWORD=mrp_pass
+      - DB_HOST=db
+      - DB_NAME=mrp_db
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend  # Asegúrate que esta ruta exista
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:

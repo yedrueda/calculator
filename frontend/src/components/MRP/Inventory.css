@@ -1,0 +1,70 @@
+/* Inventory.css */
+.inventario-container {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+  }
+  
+  .inventario-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .inventario-table th,
+  .inventario-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .inventario-table th {
+    background-color: #e9ecef;
+    font-weight: 600;
+  }
+  
+  .stock-bajo {
+    background-color: #ffe3e3 !important;
+  }
+  
+  .btn-editar {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-editar:hover {
+    background-color: #45a049;
+  }
+  
+  .btn-guardar {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-cancelar {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="number"] {
+    width: 100px;
+    padding: 6px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
